@@ -1,0 +1,154 @@
+@import mixins
+
+html
+  font-size: 16px
+
+body
+  font-family: "helvetica neue", sans-serif
+  font-weight: 300
+  font-size: 14px
+  line-height: 20px
+  margin: 0
+
+a
+  color: #2f7ed8
+  text-decoration: none
+
+.container
+  margin-left: auto
+  margin-right: auto
+  max-width: 1170px
+
+.page-header, .row
+  &:before, &:after
+    display: table
+    content: ""
+    line-height: 0
+
+.row
+  margin-left: -30px
+
+.page-header
+  background-color: #f7f7f7
+  border-bottom: 1px solid #eee
+  margin: 0
+  padding: 10px
+  .brand
+    background: transparent url('data:image/gif;base64,R0lGODdhLwAQAPU7AMzMzMvLy7CwsLKysra2trW1tcPDw8rKyrS0tOjo6Lq6uvX19bGxsdDQ0Onp6c3NzcLCwru7u+Pj48TExN7e3uvr693d3ezs7NfX18jIyOrq6ubm5s/Pz7m5ucHBwcDAwNbW1vDw8O3t7b+/v7e3t/T09OHh4fLy8sXFxcfHx7Ozs+fn5729vc7Ozr6+vri4uPPz87y8vNHR0dnZ2eTk5N/f39jY2OLi4vb29q+vr/f39/Hx8QAAAAAAAAAAAAAAACwAAAAALwAQAEAG/0CdcFEzFAoEgoGyEDp1F04EWVA0Kk9hiQJJFkjLpjDHwWXPjdxAdM46XrlHOxsYSAaHufAh4IwQCXoJBCMNAgB6OgECGzoAOSBmWTgYOYgOCC4XbRcjKoGPGJJPlHFNJxM5BxpPGgACBjtCFAwRFjBOMBYdORZCOwaHrE4OrxOyCAZicwsZOTk0iTp3OSjSOBAKEwNYehUkzy3SaTkE3XMOBQG/j0oBAAYElrJOEhE5MRkPGSw5ESZPdjwoByFAAAgF4tATcuIVgg8HDngoICDAQh03OgxQkAJACo0dADrZAYABAg8RPSA4RA/HIxBzKq3TkGnTGREsEDhQBCmmJXscBrglugAuh7hE5MwlSneAzKg5adZIexNHmiKTyhKVcCZAgjRq1hJhU3Anj55XDT58EvRQxqFEBwSs0LEjVYAEoxIEyDEhxCwGCiws3GFBAQMKvwxYwisER4Kmx0itABBhAOAAG54KCWEDoYACEGb4nbQhgOEBETCPCgIAOw==') no-repeat center left
+    color: #999
+    font-size: 1.25rem
+    padding-left: 55px
+    vertical-align: text-top
+    &:hover
+      text-decoration: none
+
+h1, h2, h3, h4, h5, h6
+  color: #666
+  font-family: "helvetica neue", sans-serif
+  font-weight: 300
+  line-height: 20px
+  margin: 0
+  text-rendering: optimizelegibility
+
+h1, h2, h3
+  line-height: 40px
+
+h2
+  font-size: 31.5px
+
+h5
+  font-size: 14px
+
+.search-container
+  margin: 0 auto
+  height: 100%
+  width: 600px
+
+.icon-search
+  background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAgCAYAAACxSj5wAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAbtJREFUaN7t2E2ISFEUwPGfIcYUIykpKyTNTkmxJJHFUUpR5GPBzgIbW7EwNmws2Eg+JlauhJQNxYw9kiQxWbDwMY3yuTnqNc0oCzOad//1Ot1zb93Xv3vPve9RqVQqlUplkjJlIiYtpSzArnwWZ3oQl3A6Il61VlAppQcXsDxTQ/iBWQ1RmyOiv3WCSimzcROr8Ql3cB1fsQEbMRcvsDYiXk60oGnjPN+mlDOM3og42ui7WErZinNYhMPYN9GCOsZ5vm0ZB3ByZGdE9OFqNntKKV1tEzQn44OI+DzGmNsZ52Np2wR9z9j5hzFTM37Lp1WCBjOuLKV0j1LEZ2BHNt/ieduKdB+2YBVOlVL2Z8H+iek4gjW5cm5ExJe2raBbuJzXi53oz2J9HPdwMPs+4t1oq6wNF8WFOIV1jcvhb4bxGkvy3a7hWEQ8atWnRorajsC83F5vcBf3cQU9OfQJ9kTEw1YJaojqwsyIeN/IHcKJxrDH2B0RA60TNIa0bvRibyP9FOvH+0O2438UFBEfcABnGullWDHZT7G/kTSUks5m6nyedHWLjdhunflr5FmzTlUqlUqlUqlU/i2/AD26dr2yIFw9AAAAGXRFWHRDb21tZW50AENyZWF0ZWQgd2l0aCBHSU1QV4EOFwAAAAd0SU1FB9sGHhI0AVgkJz8AAAAASUVORK5CYII=') no-repeat
+  background-position: 20px 3px
+  width: 72px
+  height: 32px
+
+.search-form
+  +transition((all 400ms ease))
+  +transform(translateY(70px))
+  margin: 30px auto 10px
+  position: relative
+  height: 30px
+  input
+    font-size: 20px
+    height: 30px
+    line-height: 30px
+    padding-left: 5px
+    width: 99%
+    &.error
+      outline-color: red
+  .icon-search
+    position: absolute
+    top: 0
+    right: 0
+  .error-message
+    color: red
+    font-style: italic
+    margin-top: 0.3rem
+  &.collapsed
+    +transform(translateY(0px))
+
+.activities-header, .chart-header, .activities-list, .activities-chart, .map-container
+  opacity: 0.01
+  +perspective(400px)
+  +perspective-origin(50% 50%)
+  +transform-origin(0% 100%)
+  +transform(rotateX(-80deg))
+
+.activities-header, .chart-header
+  +transition((all 200ms ease, opacity 100ms ease))
+  margin: 15px 0 0
+  padding-bottom: 5px
+  .subheader
+    color: #999
+    margin-top: -5px
+
+.activities-chart, .activities-list
+  +transition((all 500ms ease 100ms, opacity 250ms ease 250ms))
+
+.flip-in
+  opacity: 1
+  +transform-origin(0% 0%)
+  +transform(translateZ(0px))
+
+.activities-header
+  border-bottom: 1px solid #CCC
+
+.activities-list
+  list-style: none
+  height: 250px
+  margin: 0
+  overflow: auto
+  // FIXME: this is a terrible hack... use flexbox
+  // height of all other items is 472px
+  @media only screen and (min-height: 800px) and (max-height: 899px)
+    height: 328px
+  @media only screen and (min-height: 900px) and (max-height: 999px)
+    height: 428px
+  @media only screen and (min-height: 1000px) and (max-height: 1099px)
+    height: 528px
+  @media only screen and (min-height: 1100px) and (max-height: 1199px)
+    height: 628px
+  @media only screen and (min-height: 1200px) and (max-height: 1299px)
+    height: 728px
+  @media only screen and (min-height: 1300px) and (max-height: 1399px)
+    height: 828px
+  @media only screen and (min-height: 1400px)
+    height: 928px
+
+.activities-list .tweet
+  border-bottom: 1px solid #e8e8e8
+  padding-bottom: 5px
+
+.no-activities
+  color: #666
+  font-size: 3rem
+  line-height: 3rem
+  text-align: center
